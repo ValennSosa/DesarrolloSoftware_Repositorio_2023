@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Reservas Hotel Plaza </title>
+
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Reservas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Habitaciones.html">Habitaciones</a></li>
+                <li><a href="Reservas.html">Reservas</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="reserva-form">
+        <h2>Realiza tu Reserva</h2>
+        <p>Por favor, completa el siguiente formulario para realizar una reserva en nuestro hotel.</p>
+        <form action="procesar_reserva.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            
+            <label for="habitacion">Tipo de Habitación:</label>
+            <select id="habitacion" name="habitacion" required>
+                <option value="habitacion1">Habitación de Lujo</option>
+                <option value="habitacion2">Suite Ejecutiva</option>
+                <option value="habitacion3">Suite Viajeros</option>
+                <option value="habitacion4">Suite 'Luna de Miel'</option>
+                <!-- Agrega más opciones según tus habitaciones disponibles -->
+            </select>
+            
+            <label for="fecha-llegada">Fecha de Llegada:</label>
+            <input type="date" id="fecha-llegada" name="fecha-llegada" required>
+            
+            <label for="fecha-salida">Fecha de Salida:</label>
+            <input type="date" id="fecha-salida" name="fecha-salida" required>
+            
+            <button type="submit">Enviar Reserva</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Hotel Plaza. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
